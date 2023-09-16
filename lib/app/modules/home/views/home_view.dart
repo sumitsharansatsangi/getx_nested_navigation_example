@@ -6,21 +6,22 @@ import 'package:getx_nested_navigation_example/app/modules/nested_navigation_mai
 import 'package:getx_nested_navigation_example/app/modules/standard_navigation_main/views/standard_navigation_main_view.dart';
 import 'package:getx_nested_navigation_example/app/modules/sub_tabs_nested_navigation_main/views/sub_tabs_nested_navigation_main_view.dart';
 import 'package:getx_nested_navigation_example/app/routes/app_pages.dart';
+import 'package:getx_nested_navigation_example/app/utils/get_view_keep_live.dart';
 import 'package:getx_nested_navigation_example/constants.dart';
 
 import '../controllers/home_controller.dart';
 
-class HomeView extends GetView<HomeController> {
+class HomeView extends GetViewKeepAlive<HomeController> {
   const HomeView({super.key});
 
   @override
   Widget build(BuildContext context) {
+    debugPrint("build called in home");
     return Scaffold(
-      body: Obx(
-        () => IndexedStack(
-          index: controller.tabIndex.value,
+      body: TabBarView(
+          controller: controller.tabController,
           children: [
-            StandardNavigationMainView(),
+            const StandardNavigationMainView(),
             Navigator(
               key: Get.nestedKey(Constants.nestedNavigationNavigatorId),
               initialRoute: Routes.NESTED_NAVIGATION_MAIN,
@@ -47,7 +48,6 @@ class HomeView extends GetView<HomeController> {
             const SubTabsNestedNavigationMainView()
           ],
         ),
-      ),
       bottomNavigationBar: Obx(
         () => BottomNavigationBar(
           currentIndex: controller.tabIndex.value,
@@ -55,9 +55,9 @@ class HomeView extends GetView<HomeController> {
             BottomNavigationBarItem(
                 icon: Icon(Icons.tab), label: 'Standard'),
             BottomNavigationBarItem(
-                icon: Icon(Icons.tab), label: 'Nested'),
+                icon: Icon(Icons.table_chart), label: 'Nested'),
             BottomNavigationBarItem(
-                icon: Icon(Icons.tab), label: 'SubTabs Nested'),
+                icon: Icon(Icons.table_rows_outlined), label: 'SubTabs Nested'),
           ],
           onTap: controller.onTabClick,
         ),

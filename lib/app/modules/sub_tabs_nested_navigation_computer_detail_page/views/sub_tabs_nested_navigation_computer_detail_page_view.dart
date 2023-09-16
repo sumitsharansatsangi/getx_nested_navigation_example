@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
+import 'package:getx_nested_navigation_example/app/utils/get_view_keep_live.dart';
 import 'package:getx_nested_navigation_example/constants.dart';
 
 import '../controllers/sub_tabs_nested_navigation_computer_detail_page_controller.dart';
 
 class SubTabsNestedNavigationComputerDetailPageView
-    extends GetView<SubTabsNestedNavigationComputerDetailPageController> {
+    extends GetViewKeepAlive<SubTabsNestedNavigationComputerDetailPageController> {
   final String argument;
   const SubTabsNestedNavigationComputerDetailPageView(
       {Key? key, required this.argument})
@@ -15,6 +16,7 @@ class SubTabsNestedNavigationComputerDetailPageView
   @override
   Widget build(BuildContext context) {
     controller.setArgument(argument);
+    debugPrint("build called in SubTabsNestedNavigationComputerDetailPageView");
     return Center(
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,

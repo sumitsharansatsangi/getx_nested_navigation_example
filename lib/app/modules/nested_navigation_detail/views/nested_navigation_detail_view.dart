@@ -1,18 +1,20 @@
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
+import 'package:getx_nested_navigation_example/app/utils/get_view_keep_live.dart';
 import 'package:getx_nested_navigation_example/constants.dart';
 
 import '../controllers/nested_navigation_detail_controller.dart';
 
 class NestedNavigationDetailView
-    extends GetView<NestedNavigationDetailController> {
+    extends GetViewKeepAlive<NestedNavigationDetailController> {
   final String argument;
   const NestedNavigationDetailView({Key? key, required this.argument})
       : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    debugPrint("build called in NestedNavigationDetailView");
     return Scaffold(
       appBar: AppBar(
         title: const Text('NestedNavigationDetailView'),

@@ -3,15 +3,15 @@ import 'package:get/get.dart';
 
 class SubTabsNestedNavigationMainController extends GetxController with GetTickerProviderStateMixin {
   late TabController tabController;
-  final tabIndex = 0.obs;
+  // final tabIndex = 0.obs;
 
   @override
   void onInit() {
     super.onInit();
     tabController = TabController(length: 2, vsync: this);
-    tabController.addListener(() {
-      tabIndex.value = tabController.index;
-    });
+    // tabController.addListener(() {
+    //   tabIndex.value = tabController.index;
+    // });
   }
 
   @override

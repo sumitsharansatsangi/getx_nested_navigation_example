@@ -12,6 +12,7 @@ class SubTabsNestedNavigationComputersMainPageView
 
   @override
   Widget build(BuildContext context) {
+    debugPrint("build called in SubTabsNestedNavigationComputersMainPageView");
     return controller.obx(
       (data) => ListView.builder(
         itemBuilder: (BuildContext context, int index) => ListTile(
