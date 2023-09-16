@@ -37,6 +37,9 @@ class HomeView extends GetView<HomeController> {
                     binding: NestedNavigationDetailBinding()
                   );
                 }
+                return MaterialPageRoute(builder: (context) {
+                    return NestedNavigationMainView();
+                  });
               },
             ),
             SubTabsNestedNavigationMainView()

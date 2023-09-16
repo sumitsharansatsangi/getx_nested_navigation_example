@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
-import 'package:getx_nested_navigation_example/app/routes/app_pages.dart';
-import 'package:getx_nested_navigation_example/constants.dart';
 
 import '../controllers/nested_navigation_main_controller.dart';
 
 class NestedNavigationMainView extends GetView<NestedNavigationMainController> {
+  const NestedNavigationMainView({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

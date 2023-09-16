@@ -53,37 +53,37 @@ class AppPages {
     ),
     GetPage(
       name: _Paths.NESTED_NAVIGATION_DETAIL,
-      page: () => NestedNavigationDetailView(argument: 'default argument',),
+      page: () => const NestedNavigationDetailView(argument: 'default argument',),
       binding: NestedNavigationDetailBinding(),
     ),
     GetPage(
       name: _Paths.NESTED_NAVIGATION_MAIN,
-      page: () => NestedNavigationMainView(),
+      page: () => const NestedNavigationMainView(),
       binding: NestedNavigationMainBinding(),
     ),
     GetPage(
       name: _Paths.SUB_TABS_NESTED_NAVIGATION_MAIN,
-      page: () => SubTabsNestedNavigationMainView(),
+      page: () => const SubTabsNestedNavigationMainView(),
       binding: SubTabsNestedNavigationMainBinding(),
     ),
     GetPage(
       name: _Paths.SUB_TABS_NESTED_NAVIGATION_COMPUTERS_MAIN_PAGE,
-      page: () => SubTabsNestedNavigationComputersMainPageView(),
+      page: () => const SubTabsNestedNavigationComputersMainPageView(),
       binding: SubTabsNestedNavigationComputersMainPageBinding(),
     ),
     GetPage(
       name: _Paths.SUB_TABS_NESTED_NAVIGATION_COMPUTER_DETAIL_PAGE,
-      page: () => SubTabsNestedNavigationComputerDetailPageView(argument: '',),
+      page: () => const SubTabsNestedNavigationComputerDetailPageView(argument: '',),
       binding: SubTabsNestedNavigationComputerDetailPageBinding(),
     ),
     GetPage(
       name: _Paths.SUB_TABS_NESTED_NAVIGATION_LAPTOP_DETAIL_PAGE,
-      page: () => SubTabsNestedNavigationLaptopDetailPageView(argument: '',),
+      page: () => const SubTabsNestedNavigationLaptopDetailPageView(argument: '',),
       binding: SubTabsNestedNavigationLaptopDetailPageBinding(),
     ),
     GetPage(
       name: _Paths.SUB_TABS_NESTED_NAVIGATION_LAPTOPS_MAIN_PAGE,
-      page: () => SubTabsNestedNavigationLaptopsMainPageView(),
+      page: () => const SubTabsNestedNavigationLaptopsMainPageView(),
       binding: SubTabsNestedNavigationLaptopsMainPageBinding(),
     ),
   ];

@@ -14,6 +14,8 @@ import '../controllers/sub_tabs_nested_navigation_main_controller.dart';
 
 class SubTabsNestedNavigationMainView
     extends GetView<SubTabsNestedNavigationMainController>  {
+  const SubTabsNestedNavigationMainView({super.key});
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -45,7 +47,7 @@ class SubTabsNestedNavigationMainView
                     if (routeSettings.name == Routes.SUB_TABS_NESTED_NAVIGATION_COMPUTERS_MAIN_PAGE) {
                       return GetPageRoute(
                           routeName: Routes.SUB_TABS_NESTED_NAVIGATION_COMPUTER_DETAIL_PAGE,
-                          page: () => SubTabsNestedNavigationComputersMainPageView(),
+                          page: () => const SubTabsNestedNavigationComputersMainPageView(),
                           transitionDuration: const Duration(milliseconds: 100),
                           transition: Transition.circularReveal,
                           popGesture: true,
@@ -63,6 +65,15 @@ class SubTabsNestedNavigationMainView
                         binding: SubTabsNestedNavigationComputerDetailPageBinding()
                       );
                     }
+                    return GetPageRoute(
+                          routeName: Routes.SUB_TABS_NESTED_NAVIGATION_COMPUTER_DETAIL_PAGE,
+                          page: () => const SubTabsNestedNavigationComputersMainPageView(),
+                          transitionDuration: const Duration(milliseconds: 100),
+                          transition: Transition.circularReveal,
+                          popGesture: true,
+                          maintainState: true,
+                          binding: SubTabsNestedNavigationComputersMainPageBinding()
+                      );
                   },
                 ),
                 Navigator(
@@ -72,7 +83,7 @@ class SubTabsNestedNavigationMainView
                     if (routeSettings.name == Routes.SUB_TABS_NESTED_NAVIGATION_LAPTOPS_MAIN_PAGE) {
                       return GetPageRoute(
                           routeName: Routes.SUB_TABS_NESTED_NAVIGATION_LAPTOP_DETAIL_PAGE,
-                          page: () => SubTabsNestedNavigationLaptopsMainPageView(),
+                          page: () => const SubTabsNestedNavigationLaptopsMainPageView(),
                           transitionDuration: const Duration(milliseconds: 100),
                           transition: Transition.circularReveal,
                           popGesture: true,
@@ -93,6 +104,15 @@ class SubTabsNestedNavigationMainView
                         binding: SubTabsNestedNavigationLaptopDetailPageBinding()
                       );
                     }
+                    return GetPageRoute(
+                          routeName: Routes.SUB_TABS_NESTED_NAVIGATION_LAPTOP_DETAIL_PAGE,
+                          page: () => const SubTabsNestedNavigationLaptopsMainPageView(),
+                          transitionDuration: const Duration(milliseconds: 100),
+                          transition: Transition.circularReveal,
+                          popGesture: true,
+                          maintainState: true,
+                          binding: SubTabsNestedNavigationLaptopsMainPageBinding()
+                      );
                   },
                 ),
               ],
