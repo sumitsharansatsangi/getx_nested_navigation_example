@@ -11,6 +11,8 @@ import 'package:getx_nested_navigation_example/constants.dart';
 import '../controllers/home_controller.dart';
 
 class HomeView extends GetView<HomeController> {
+  const HomeView({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -25,7 +27,7 @@ class HomeView extends GetView<HomeController> {
               onGenerateRoute: (routeSettings) {
                 if (routeSettings.name == Routes.NESTED_NAVIGATION_MAIN) {
                   return MaterialPageRoute(builder: (context) {
-                    return NestedNavigationMainView();
+                    return const NestedNavigationMainView();
                   });
                 } else if (routeSettings.name ==
                     Routes.NESTED_NAVIGATION_DETAIL) {
@@ -38,11 +40,11 @@ class HomeView extends GetView<HomeController> {
                   );
                 }
                 return MaterialPageRoute(builder: (context) {
-                    return NestedNavigationMainView();
+                    return const NestedNavigationMainView();
                   });
               },
             ),
-            SubTabsNestedNavigationMainView()
+            const SubTabsNestedNavigationMainView()
           ],
         ),
       ),

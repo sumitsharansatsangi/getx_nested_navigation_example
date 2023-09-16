@@ -7,6 +7,8 @@ import '../controllers/standard_navigation_main_controller.dart';
 
 class StandardNavigationMainView
     extends GetView<StandardNavigationMainController> {
+  const StandardNavigationMainView({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

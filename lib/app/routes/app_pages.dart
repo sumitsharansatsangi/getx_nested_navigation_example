@@ -33,22 +33,22 @@ class AppPages {
   static final routes = [
     GetPage(
       name: _Paths.HOME,
-      page: () => HomeView(),
+      page: () => const HomeView(),
       binding: HomeBinding(),
     ),
     GetPage(
       name: _Paths.WELCOME,
-      page: () => WelcomeView(),
+      page: () => const WelcomeView(),
       binding: WelcomeBinding(),
     ),
     GetPage(
       name: _Paths.STANDARD_NAVIGATION_MAIN,
-      page: () => StandardNavigationMainView(),
+      page: () => const StandardNavigationMainView(),
       binding: StandardNavigationMainBinding(),
     ),
     GetPage(
       name: _Paths.STANDARD_NAVIGATION_DETAIL,
-      page: () => StandardNavigationDetailView(),
+      page: () => const StandardNavigationDetailView(),
       binding: StandardNavigationDetailBinding(),
     ),
     GetPage(
